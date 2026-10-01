@@ -449,6 +449,11 @@ function DashboardMock() {
         <div className="hidden w-12 flex-col items-center gap-4 border-r border-white/10 py-4 sm:flex">
           <span className="size-6 rounded-md bg-nex-gradient" />
           {[LayoutDashboard, BarChart3, Wallet, FolderOpen, Users].map((I, i) => { const Icon = I; return <Icon key={i} className={`size-4 ${i === 0 ? "text-cyan" : "text-white/30"}`} />; })}
+          {/* WhatsApp com pulso discreto */}
+          <span className="relative mt-1 flex items-center justify-center" aria-hidden="true">
+            <span className="absolute size-4 rounded-full bg-cyan/40 motion-safe:animate-nex-ping" style={{ animationDuration: "3.2s", animationTimingFunction: "ease-out" }} />
+            <WhatsAppIcon className="relative size-4 text-cyan/90 motion-safe:animate-pulse" />
+          </span>
         </div>
         <div className="flex-1 p-4 sm:p-5">
           {/* topo: título + filtro + saldo */}
