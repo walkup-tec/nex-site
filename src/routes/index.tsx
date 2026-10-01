@@ -5,9 +5,9 @@ import {
   Megaphone, Menu, MessageCircle, MonitorSmartphone, Rocket, Search, ShieldCheck, Sparkles, Target, Workflow, Zap,
   Wallet, FolderOpen, Users,
 } from "lucide-react";
-import footerLogo from "@/assets/nex-logo-dark.png.asset.json";
-import metaOfficial from "@/assets/meta-official-dark.svg.asset.json";
-import googleOfficial from "@/assets/google-official-cropped.png.asset.json";
+import footerLogo from "@/assets/nex-logo-dark.png";
+import metaOfficial from "@/assets/meta-official-dark.svg";
+import googleOfficial from "@/assets/google-official-cropped.png";
 import attendantAvatar from "@/assets/attendant-avatar.png";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { faq, messages, sections, solutions, waLink } from "@/data/site";
