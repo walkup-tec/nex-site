@@ -111,7 +111,10 @@ function SitePage() {
         ); })}
         <div className="mx-auto my-1 h-px w-6 bg-border" />
         <a href={waLink(messages.general)} target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" className="group relative flex h-11 max-w-11 items-center overflow-hidden rounded-xl text-cyan transition-[max-width,background-color,color] duration-300 hover:max-w-56 hover:bg-secondary">
-          <span className="grid size-11 shrink-0 place-items-center"><WhatsAppIcon className="size-[18px]" /></span>
+          <span className="relative grid size-11 shrink-0 place-items-center">
+            <span aria-hidden="true" className="absolute size-7 rounded-full border border-cyan/50 motion-safe:animate-nex-ping" style={{ animationDuration: "3s" }} />
+            <WhatsAppIcon className="relative size-[18px]" />
+          </span>
           <span className="max-w-0 overflow-hidden whitespace-nowrap text-sm font-semibold opacity-0 transition-all duration-300 group-hover:max-w-44 group-hover:pr-4 group-hover:opacity-100 group-focus-visible:max-w-44 group-focus-visible:pr-4 group-focus-visible:opacity-100">Falar no WhatsApp</span>
         </a>
       </nav>
