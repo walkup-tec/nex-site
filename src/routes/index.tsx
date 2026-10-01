@@ -294,7 +294,7 @@ function SitePage() {
           </div>
           <div className="mt-9 flex flex-col items-center justify-between gap-3 border-t border-border/60 pt-6 text-sm text-muted-foreground sm:flex-row">
             <p>© {new Date().getFullYear()} NEX Marketing Digital. Tecnologia desde 2006.</p>
-            <Link to="/auth" className="transition hover:text-foreground">Área do cliente</Link>
+            <a href={waLink(messages.general)} target="_blank" rel="noopener noreferrer" className="transition hover:text-foreground">Fale conosco</a>
           </div>
         </div>
       </footer>
