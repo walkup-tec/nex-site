@@ -127,9 +127,9 @@ function SitePage() {
               <div>
                 <p className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-3 py-1.5 text-xs font-semibold text-accent-foreground"><Sparkles className="size-3.5" />Tecnologia e inovação desde 2006</p>
                 <h1 className="mt-6 font-display text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
-                  Marketing, tecnologia e automação para transformar <span className="text-nex-gradient">investimento em clientes</span>.
+                  Anúncios que transformam <span className="text-nex-gradient">cliques em clientes</span>.
                 </h1>
-                <p className="mt-6 max-w-xl text-lg text-muted-foreground">Unimos tráfego pago no Meta e no Google, WhatsApp, sistemas e inteligência artificial em uma operação orientada a dados — com quase duas décadas de experiência em tecnologia.</p>
+                <p className="mt-6 max-w-xl text-lg text-muted-foreground">Criamos e gerenciamos campanhas de tráfego pago no Google, Instagram e Facebook para colocar sua empresa na frente de quem já está procurando o que você vende — com estratégia, dados e otimização constante.</p>
                 <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                   <WaButton msg={messages.general} className="h-14 px-7 text-base">Falar com um especialista</WaButton>
                   <a href="#solucoes" className="inline-flex h-14 items-center justify-center gap-2 rounded-xl border border-border px-7 text-base font-semibold transition hover:bg-secondary">Conheça nossas soluções<ArrowRight className="size-4" /></a>
