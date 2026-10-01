@@ -302,9 +302,8 @@ function SitePage() {
               </div>
             </div>
           </div>
-          <div className="mt-9 flex flex-col items-center justify-between gap-3 border-t border-border/60 pt-6 text-sm text-muted-foreground sm:flex-row">
+          <div className="mt-9 border-t border-border/60 pt-6 text-center text-sm text-muted-foreground">
             <p>© {new Date().getFullYear()} NEX Marketing Digital. Tecnologia desde 2006.</p>
-            <a href={waLink(messages.general)} target="_blank" rel="noopener noreferrer" className="transition hover:text-foreground">Fale conosco</a>
           </div>
         </div>
       </footer>
