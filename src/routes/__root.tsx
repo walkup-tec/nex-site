@@ -78,10 +78,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "NEX Marketing Digital — Marketing, tecnologia e automação desde 2006" },
+      { title: "NEX ADS" },
       { name: "description", content: "Tráfego pago no Meta Ads e Google Ads, WhatsApp, sistemas, sites e automação com IA. Performance apoiada por tecnologia e dados desde 2006." },
       { name: "author", content: "NEX Marketing Digital" },
-      { property: "og:title", content: "NEX Marketing Digital — Marketing, tecnologia e automação desde 2006" },
+      { property: "og:title", content: "NEX ADS" },
       { property: "og:description", content: "Tráfego pago no Meta Ads e Google Ads, WhatsApp, sistemas, sites e automação com IA. Performance apoiada por tecnologia e dados desde 2006." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
