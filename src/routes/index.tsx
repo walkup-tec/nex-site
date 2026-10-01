@@ -119,7 +119,7 @@ function SitePage() {
       <main className="lg:[&_section>div]:pl-24 2xl:[&_section>div]:pl-6">
         {/* HERO */}
         <section id="inicio" className="relative overflow-hidden bg-[var(--surface-1)] pt-28 pb-20 lg:pt-40 lg:pb-32">
-          <div className="absolute inset-0 bg-grid opacity-55 [mask-image:radial-gradient(ellipse_at_70%_30%,black,transparent_70%)]" aria-hidden />
+
           <div className="animate-drift-slow absolute -right-40 -top-40 size-[640px] rounded-full bg-[radial-gradient(circle,color-mix(in_oklch,#6F02FD_35%,transparent),transparent_65%)]" aria-hidden />
           <div className="animate-drift absolute -left-32 -bottom-48 size-[520px] rounded-full bg-[radial-gradient(circle,color-mix(in_oklch,#00EAFD_15%,transparent),transparent_65%)]" aria-hidden />
           <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[1.05fr_1fr]">
@@ -249,7 +249,7 @@ function SitePage() {
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
             <Reveal>
               <div className="relative overflow-hidden rounded-3xl bg-nex-gradient p-10 text-center text-primary-foreground sm:p-16">
-                <div className="absolute inset-0 bg-grid opacity-40" aria-hidden />
+
                 <div className="animate-drift-slow absolute -left-24 -top-24 size-96 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,.3),transparent_60%)]" aria-hidden />
                 <div className="animate-drift absolute -bottom-40 -right-24 size-[420px] rounded-full bg-[radial-gradient(circle,rgba(1,3,23,.4),transparent_60%)]" aria-hidden />
                 <h2 className="relative font-display text-3xl font-bold sm:text-4xl">Vamos conversar sobre o crescimento da sua empresa?</h2>
