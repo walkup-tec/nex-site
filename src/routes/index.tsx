@@ -139,7 +139,7 @@ function SitePage() {
                   Anúncios que transformam <span className="text-nex-gradient">cliques em clientes</span>.
                 </h1>
                 <ul className="mt-6 max-w-xl space-y-2.5">
-                  {["Tráfego pago no Instagram, Facebook ou Google", "Disparo WhatsApp API Oficial", "Sistemas e tecnologia"].map((t) => (
+                  {["Tráfego pago no Instagram, Facebook", "Tráfego pago no Google", "Sistemas, automações e tecnologias"].map((t) => (
                     <li key={t} className="flex items-center gap-2.5 text-base text-muted-foreground"><span className="grid size-5 shrink-0 place-items-center rounded-full bg-primary/15"><Check className="size-3 text-cyan" /></span><span>{t}</span></li>
                   ))}
                 </ul>
