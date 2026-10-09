@@ -8,7 +8,6 @@ export const messages = {
   general: "Olá! Vim pelo site da NEX Marketing Digital e gostaria de saber mais sobre as soluções.",
   meta: "Olá! Vim pelo site da NEX e gostaria de conversar sobre gestão de tráfego no Meta Ads.",
   google: "Olá! Vim pelo site da NEX e gostaria de conversar sobre Google Ads.",
-  whatsapp: "Olá! Vim pelo site da NEX e gostaria de saber mais sobre a solução de disparos via WhatsApp.",
   systems: "Olá! Vim pelo site da NEX e gostaria de conversar sobre desenvolvimento de um sistema.",
   ai: "Olá! Vim pelo site da NEX e gostaria de conversar sobre automação e IA para minha empresa.",
   sites: "Olá! Vim pelo site da NEX e gostaria de conversar sobre desenvolvimento de site ou landing page.",
@@ -48,18 +47,6 @@ export const solutions = [
       "Leitura clara de custo por resultado por canal e por campanha",
     ],
     msg: messages.google,
-  },
-  {
-    key: "whatsapp",
-    title: "Disparos via WhatsApp",
-    text: "Comunicação em escala pelo canal que o brasileiro mais usa, com segmentação da base e mensagens personalizadas por perfil — conectando a campanha ao atendimento real da sua empresa.",
-    points: [
-      "Envio em escala com segmentação da sua base",
-      "Mensagens personalizadas por perfil de cliente",
-      "Integração com sistemas, planilhas e CRM que você já usa",
-      "Envios alinhados às políticas do WhatsApp",
-    ],
-    msg: messages.whatsapp,
   },
   {
     key: "systems",
@@ -102,10 +89,7 @@ export const solutions = [
 export const faq = [
   { q: "A NEX é apenas uma agência de tráfego?", a: "Não. Atuamos em tráfego pago, mas também desenvolvemos sistemas, sites, automações e soluções com IA. Isso permite cuidar tanto da aquisição de clientes quanto da tecnologia que sustenta sua operação comercial." },
   { q: "Desde quando a NEX atua no mercado?", a: "Atuamos no mercado de tecnologia desde 2006." },
-  { q: "Em quais plataformas de anúncio vocês trabalham?", a: "Meta Ads (Facebook e Instagram) e Google Ads, além de comunicação via WhatsApp." },
-  { q: "Os disparos de WhatsApp são via API Oficial ou outras APIs?", a: "Disparamos através da plataforma oficial da Meta, enviando mensagens em larga escala via API Oficial — com segurança e alinhados às políticas do WhatsApp." },
-  { q: "Para disparar via WhatsApp, eu preciso ter números ou estrutura dentro da Meta?", a: "Não. A estrutura é toda nossa — número e demais ativos da Meta. Você não precisa ter absolutamente nada." },
-  { q: "Qual a quantidade mínima para disparo de WhatsApp?", a: "A quantidade mínima é de 5 mil envios para cada disparo contratado." },
+  { q: "Em quais plataformas de anúncio vocês trabalham?", a: "Meta Ads (Facebook e Instagram) e Google Ads." },
   { q: "O que é o NEX Ads?", a: "É a plataforma própria da NEX onde o cliente acompanha os resultados das suas campanhas, saldo de mídia, financeiro e criativos em um só lugar, com transparência." },
   { q: "Vocês desenvolvem sistemas sob medida?", a: "Sim. Desenvolvemos sistemas web, integrações e automações de acordo com a necessidade do seu negócio." },
   { q: "Como começo?", a: "Basta chamar no WhatsApp. Um especialista entende o seu momento e indica o melhor caminho — sem formulário e sem cadastro." },

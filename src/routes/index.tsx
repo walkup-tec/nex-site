@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
 });
 
 const navIcons = { inicio: Home, solucoes: Rocket, "nex-ads": Megaphone, tecnologia: Cpu, sobre: Building2, faq: HelpCircle, contato: MessageCircle } as const;
-const solIcons = { meta: Target, google: Search, whatsapp: WhatsAppIcon, systems: Code2, ai: Bot, sites: MonitorSmartphone } as const;
+const solIcons = { meta: Target, google: Search, systems: Code2, ai: Bot, sites: MonitorSmartphone } as const;
 
 function WhatsAppIcon({ className = "" }: { className?: string }) {
   return (
