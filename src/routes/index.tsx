@@ -427,7 +427,6 @@ function HeroVisual() {
         <div className="mt-2 flex items-center gap-2">
           <img src={metaOfficial} alt="Meta" className="h-4 w-auto object-contain" loading="lazy" />
           <img src={googleOfficial} alt="Google" className="h-5 w-auto object-contain" loading="lazy" />
-          <span className="flex items-center gap-1"><WhatsAppIcon className="size-5 text-accent-foreground" /><span className="text-[11px] text-muted-foreground">WhatsApp</span></span>
         </div>
       </div>
       <div className="animate-float absolute -right-4 -top-6 hidden rounded-2xl border border-border bg-card p-4 shadow-panel sm:block" style={{ animationDelay: "1.4s" }}>
