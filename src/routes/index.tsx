@@ -41,9 +41,15 @@ function WhatsAppIcon({ className = "" }: { className?: string }) {
   );
 }
 
+function trackWhatsAppClick() {
+  const report = (window as Window & { gtag_report_conversion?: (url?: string) => boolean })
+    .gtag_report_conversion;
+  if (typeof report === "function") report();
+}
+
 function WaButton({ msg, children, className = "" }: { msg: string; children: React.ReactNode; className?: string }) {
   return (
-    <a href={waLink(msg)} target="_blank" rel="noopener noreferrer"
+    <a href={waLink(msg)} target="_blank" rel="noopener noreferrer" onClick={trackWhatsAppClick}
       className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-nex-gradient px-6 text-sm font-semibold text-primary-foreground shadow-brand transition hover:-translate-y-0.5 hover:brightness-110 ${className}`}>
       <WhatsAppIcon className="size-4" />{children}
     </a>
@@ -110,7 +116,7 @@ function SitePage() {
           </a>
         ); })}
         <div className="mx-auto my-1 h-px w-6 bg-border" />
-        <a href={waLink(messages.general)} target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" className="group relative flex h-11 max-w-11 items-center overflow-hidden rounded-xl text-cyan transition-[max-width,background-color,color] duration-300 hover:max-w-56 hover:bg-secondary">
+        <a href={waLink(messages.general)} target="_blank" rel="noopener noreferrer" onClick={trackWhatsAppClick} aria-label="Falar no WhatsApp" className="group relative flex h-11 max-w-11 items-center overflow-hidden rounded-xl text-cyan transition-[max-width,background-color,color] duration-300 hover:max-w-56 hover:bg-secondary">
           <span className="relative grid size-11 shrink-0 place-items-center">
             <span aria-hidden="true" className="absolute size-7 rounded-full border border-cyan/50 motion-safe:animate-nex-ping" style={{ animationDuration: "3s" }} />
             <WhatsAppIcon className="relative size-[18px]" />
@@ -171,7 +177,7 @@ function SitePage() {
                         <li key={pt} className="flex gap-2.5 text-[13px] leading-snug"><Check className="mt-0.5 size-3.5 shrink-0 text-cyan" /><span>{pt}</span></li>
                       ))}
                     </ul>
-                    <a href={waLink(s.msg)} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-accent-foreground">Conversar sobre isso<ArrowRight className="size-4 transition group-hover:translate-x-1" /></a>
+                    <a href={waLink(s.msg)} target="_blank" rel="noopener noreferrer" onClick={trackWhatsAppClick} className="mt-6 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-accent-foreground">Conversar sobre isso<ArrowRight className="size-4 transition group-hover:translate-x-1" /></a>
                   </article>
                 </Reveal>
               ); })}
@@ -267,7 +273,7 @@ function SitePage() {
                 <div className="animate-drift absolute -bottom-40 -right-24 size-[420px] rounded-full bg-[radial-gradient(circle,rgba(1,3,23,.4),transparent_60%)]" aria-hidden />
                 <h2 className="relative font-display text-3xl font-bold sm:text-4xl">Vamos conversar sobre o crescimento da sua empresa?</h2>
                 <p className="relative mx-auto mt-4 max-w-xl opacity-90">Fale direto com um especialista no WhatsApp. Sem formulário, sem cadastro.</p>
-                <a href={waLink(messages.general)} target="_blank" rel="noopener noreferrer" className="cta-invert relative mt-8 inline-flex h-14 items-center gap-2.5 whitespace-nowrap rounded-xl px-7 text-[15px] font-semibold transition hover:-translate-y-0.5"><WhatsAppIcon className="size-5" />Falar com um especialista</a>
+                <a href={waLink(messages.general)} target="_blank" rel="noopener noreferrer" onClick={trackWhatsAppClick} className="cta-invert relative mt-8 inline-flex h-14 items-center gap-2.5 whitespace-nowrap rounded-xl px-7 text-[15px] font-semibold transition hover:-translate-y-0.5"><WhatsAppIcon className="size-5" />Falar com um especialista</a>
               </div>
             </Reveal>
           </div>
@@ -312,7 +318,7 @@ function SitePage() {
       </footer>
 
       {/* WhatsApp flutuante — atendente com selo */}
-      <a href={waLink(messages.general)} target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp com uma atendente"
+      <a href={waLink(messages.general)} target="_blank" rel="noopener noreferrer" onClick={trackWhatsAppClick} aria-label="Falar no WhatsApp com uma atendente"
         className="group fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] right-5 z-50 flex items-center gap-2 transition-transform duration-300 hover:scale-105 active:scale-95">
         <span className="hidden opacity-0 translate-x-2 rounded-full border border-border bg-card/90 px-3 py-1.5 text-xs font-medium text-foreground shadow-brand backdrop-blur transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 md:block">
           Falar no WhatsApp

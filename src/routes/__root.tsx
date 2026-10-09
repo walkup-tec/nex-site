@@ -120,6 +120,24 @@ gtag('js', new Date());
 gtag('config', 'AW-18497822051');`,
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18497822051/xr_4CJP1qZMdEOO6ufRE',
+      'value': 1.0,
+      'currency': 'BRL',
+      'event_callback': callback
+  });
+  return false;
+}`,
+          }}
+        />
       </head>
       <body>
         {children}
