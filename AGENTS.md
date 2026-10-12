@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep chatbot benefit terms and feature data in the shared site data module; presentation consumes it so commercial limits have a single testable source.

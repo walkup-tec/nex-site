@@ -3,14 +3,14 @@ import { useEffect, useRef, useState } from "react";
 import {
   ArrowRight, BarChart3, Bot, Building2, Check, Code2, Cpu, Database, Globe, HelpCircle, Home, LayoutDashboard,
   Megaphone, Menu, MessageCircle, MonitorSmartphone, Rocket, Search, ShieldCheck, Sparkles, Target, Workflow, Zap,
-  Wallet, FolderOpen, Users,
+  Wallet, FolderOpen, Users, Columns3, ContactRound, ArrowRightLeft,
 } from "lucide-react";
 import footerLogo from "@/assets/nex-logo-dark.png";
 import metaOfficial from "@/assets/meta-official-dark.svg";
 import googleOfficial from "@/assets/google-official-cropped.png";
 import attendantAvatar from "@/assets/attendant-avatar.png";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
-import { faq, messages, sections, solutions, waLink } from "@/data/site";
+import { chatbotBenefit, faq, messages, sections, solutions, waLink } from "@/data/site";
 
 const TITLE = "NEX ADS";
 const DESC = "Tráfego pago no Meta Ads e Google Ads, WhatsApp, sistemas, sites e automação com IA. Performance apoiada por tecnologia e dados desde 2006.";
@@ -32,6 +32,7 @@ export const Route = createFileRoute("/")({
 
 const navIcons = { inicio: Home, solucoes: Rocket, "nex-ads": Megaphone, tecnologia: Cpu, sobre: Building2, faq: HelpCircle, contato: MessageCircle } as const;
 const solIcons = { meta: Target, google: Search, systems: Code2, ai: Bot, sites: MonitorSmartphone } as const;
+const chatbotIcons = { whatsapp: MessageCircle, kanban: Columns3, numbers: MonitorSmartphone, clients: ContactRound, transfer: ArrowRightLeft, team: Users } as const;
 
 function WhatsAppIcon({ className = "" }: { className?: string }) {
   return (
@@ -149,6 +150,15 @@ function SitePage() {
                     <span key={tag} className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-3.5 py-1.5 text-xs font-semibold text-foreground"><Sparkles className="size-3.5 text-cyan" />{tag}</span>
                   ))}
                 </div>
+                <a href="#chatbot" className="mt-6 flex max-w-xl items-start gap-3 border-l-2 border-cyan bg-cyan/5 py-4 pl-4 pr-3 transition hover:bg-cyan/10">
+                  <Bot className="mt-1 size-6 shrink-0 text-cyan" />
+                  <span className="min-w-0">
+                    <span className="text-xs font-bold uppercase text-cyan">Benefício exclusivo para clientes · Gratuito</span>
+                    <span className="mt-1 block font-display text-lg font-semibold">Seu chatbot de atendimento no WhatsApp</span>
+                    <span className="mt-1 block text-sm leading-relaxed text-muted-foreground">Funil de vendas, múltiplos WhatsApps e atendentes sem limite. Mais estrutura para transformar contatos em vendas.</span>
+                    <span className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-cyan">Conheça o benefício <ArrowRight className="size-4" /></span>
+                  </span>
+                </a>
                 <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                   <WaButton msg={messages.general} className="h-14 px-7 text-base">Falar com um especialista</WaButton>
                   <a href="#solucoes" className="inline-flex h-14 items-center justify-center gap-2 rounded-xl border border-border px-7 text-base font-semibold transition hover:bg-secondary">Conheça nossas soluções<ArrowRight className="size-4" /></a>
@@ -164,6 +174,26 @@ function SitePage() {
           <div className="absolute inset-0 bg-grid opacity-50 [mask-image:radial-gradient(ellipse_at_center,black_35%,transparent_80%)]" aria-hidden />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
             <SectionHead kicker="Soluções" title="Da aquisição de clientes à tecnologia que sustenta a operação" text="Cada frente conversa com a outra: a mídia gera demanda, a tecnologia organiza e a automação acelera o atendimento." />
+            <div id="chatbot" className="mt-12 scroll-mt-24 border-y border-cyan/30 bg-cyan/5 py-8 sm:px-6 lg:py-10">
+              <Reveal>
+                <div className="grid items-start gap-8 lg:grid-cols-[1fr_1.3fr] lg:gap-12">
+                  <div>
+                    <span className="inline-flex items-center gap-2 text-xs font-bold uppercase text-cyan"><Bot className="size-5" />Gratuito para clientes da NEX</span>
+                    <h3 className="mt-4 font-display text-2xl font-semibold leading-tight sm:text-3xl">Nós atraímos os clientes.<br /><span className="text-nex-gradient">Você atende e vende melhor.</span></h3>
+                    <p className="mt-4 text-sm leading-relaxed text-muted-foreground">Além das campanhas, sua empresa conta com um chatbot de atendimento pelo WhatsApp e ferramentas para organizar o comercial. Um benefício gratuito para clientes da agência, que conecta os anúncios à sua operação de vendas.</p>
+                    <WaButton msg={messages.chatbot} className="mt-6">Quero esse benefício</WaButton>
+                  </div>
+                  <ul className="grid gap-x-6 gap-y-7 sm:grid-cols-2">
+                    {chatbotBenefit.features.map((feature) => { const Icon = chatbotIcons[feature.key]; return (
+                      <li key={feature.key} className="flex items-start gap-3">
+                        <span className="grid size-10 shrink-0 place-items-center rounded-lg border border-cyan/20 bg-cyan/10 text-cyan"><Icon className="size-5" /></span>
+                        <div><h4 className="text-sm font-semibold">{feature.title}</h4><p className="mt-1 text-xs leading-relaxed text-muted-foreground">{feature.text}</p></div>
+                      </li>
+                    ); })}
+                  </ul>
+                </div>
+              </Reveal>
+            </div>
             <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {solutions.map((s, i) => { const I = solIcons[s.key]; return (
                 <Reveal key={s.key} delay={(i % 3) * 80} className="h-full">
