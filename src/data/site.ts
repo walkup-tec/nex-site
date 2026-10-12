@@ -11,6 +11,20 @@ export const messages = {
   systems: "Olá! Vim pelo site da NEX e gostaria de conversar sobre desenvolvimento de um sistema.",
   ai: "Olá! Vim pelo site da NEX e gostaria de conversar sobre automação e IA para minha empresa.",
   sites: "Olá! Vim pelo site da NEX e gostaria de conversar sobre desenvolvimento de site ou landing page.",
+  chatbot: "Olá! Vim pelo site da NEX e quero saber mais sobre o chatbot gratuito para clientes da agência.",
+} as const;
+
+export const chatbotBenefit = {
+  monthlyCostForAgencyClients: 0,
+  attendantLimit: null,
+  features: [
+    { key: "whatsapp", title: "Atendimento via WhatsApp Business", text: "Converse com seus clientes pelo canal que eles já usam." },
+    { key: "kanban", title: "Kanban de funil de vendas", text: "Acompanhe cada oportunidade, do primeiro contato à venda." },
+    { key: "numbers", title: "Múltiplos WhatsApps", text: "Reúna o atendimento de vários números em uma só operação." },
+    { key: "clients", title: "Carteira de clientes organizada", text: "Mantenha seus contatos organizados para acompanhar cada cliente." },
+    { key: "transfer", title: "Transferência entre atendentes", text: "Direcione cada conversa para a pessoa certa da sua equipe." },
+    { key: "team", title: "Sem limite de atendentes", text: "Inclua toda a equipe, sem limitar quem pode atender." },
+  ],
 } as const;
 
 export const sections = [
