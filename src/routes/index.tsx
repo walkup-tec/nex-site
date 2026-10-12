@@ -57,6 +57,16 @@ function WaButton({ msg, children, className = "" }: { msg: string; children: Re
   );
 }
 
+// Selo de destaque do benefício gratuito (hero + seção de soluções)
+function FreeBadge({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+  return (
+    <span className={`inline-flex w-fit items-center gap-2.5 rounded-full bg-nex-gradient px-5 py-2.5 text-sm font-extrabold uppercase tracking-wide text-primary-foreground shadow-brand ring-1 ring-cyan/40 ${className}`}>
+      <Bot className="size-5 shrink-0" />
+      <span className="leading-snug">{children}</span>
+    </span>
+  );
+}
+
 function useActiveSection() {
   const [active, setActive] = useState("inicio");
   const [pastHero, setPastHero] = useState(false);
