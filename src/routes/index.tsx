@@ -57,15 +57,6 @@ function WaButton({ msg, children, className = "" }: { msg: string; children: Re
   );
 }
 
-// Selo de destaque do benefício gratuito (hero + seção de soluções)
-function FreeBadge({ children, className = "" }: { children: React.ReactNode; className?: string }) {
-  return (
-    <span className={`inline-flex w-fit items-center gap-2.5 rounded-full bg-nex-gradient px-5 py-2.5 text-sm font-extrabold uppercase tracking-wide text-primary-foreground shadow-brand ring-1 ring-cyan/40 ${className}`}>
-      <Bot className="size-5 shrink-0" />
-      <span className="leading-snug">{children}</span>
-    </span>
-  );
-}
 
 function useActiveSection() {
   const [active, setActive] = useState("inicio");
@@ -160,11 +151,14 @@ function SitePage() {
                     <span key={tag} className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-3.5 py-1.5 text-xs font-semibold text-foreground"><Sparkles className="size-3.5 text-cyan" />{tag}</span>
                   ))}
                 </div>
-                <a href="#chatbot" className="mt-6 flex max-w-xl flex-col items-start gap-3 rounded-2xl border border-cyan/25 bg-cyan/5 p-5 transition hover:border-cyan/60 hover:bg-cyan/10">
-                  <FreeBadge>Benefício exclusivo para clientes · Gratuito</FreeBadge>
-                  <span className="font-display text-lg font-semibold">Seu chatbot de atendimento no WhatsApp</span>
-                  <span className="text-sm leading-relaxed text-muted-foreground">Funil de vendas, múltiplos WhatsApps e atendentes sem limite. Mais estrutura para transformar contatos em vendas.</span>
-                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-cyan">Conheça o benefício <ArrowRight className="size-4" /></span>
+                <a href="#chatbot" className="mt-6 flex max-w-xl items-start gap-3 border-l-2 border-cyan bg-cyan/5 py-4 pl-4 pr-3 transition hover:bg-cyan/10">
+                  <Bot className="mt-1 size-6 shrink-0 text-cyan" />
+                  <span className="min-w-0">
+                    <span className="text-xs font-bold uppercase text-cyan">Benefício exclusivo para clientes · Gratuito</span>
+                    <span className="mt-1 block font-display text-lg font-semibold">Seu chatbot de atendimento no WhatsApp</span>
+                    <span className="mt-1 block text-sm leading-relaxed text-muted-foreground">Funil de vendas, múltiplos WhatsApps e atendentes sem limite. Mais estrutura para transformar contatos em vendas.</span>
+                    <span className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-cyan">Conheça o benefício <ArrowRight className="size-4" /></span>
+                  </span>
                 </a>
                 <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                   <WaButton msg={messages.general} className="h-14 px-7 text-base">Falar com um especialista</WaButton>
@@ -185,7 +179,7 @@ function SitePage() {
               <Reveal>
                 <div className="grid items-start gap-8 lg:grid-cols-[1fr_1.3fr] lg:gap-12">
                   <div>
-                    <FreeBadge className="px-6 py-3 text-base sm:text-lg">Gratuito para clientes da NEX</FreeBadge>
+                    <span className="inline-flex items-center gap-2 text-xs font-bold uppercase text-cyan"><Bot className="size-5" />Gratuito para clientes da NEX</span>
                     <h3 className="mt-4 font-display text-2xl font-semibold leading-tight sm:text-3xl">Nós atraímos os clientes.<br /><span className="text-nex-gradient">Você atende e vende melhor.</span></h3>
                     <p className="mt-4 text-sm leading-relaxed text-muted-foreground">Além das campanhas, sua empresa conta com um chatbot de atendimento pelo WhatsApp e ferramentas para organizar o comercial. Um benefício gratuito para clientes da agência, que conecta os anúncios à sua operação de vendas.</p>
                     <WaButton msg={messages.chatbot} className="mt-6">Quero esse benefício</WaButton>
